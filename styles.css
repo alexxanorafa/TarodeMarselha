@@ -4,34 +4,28 @@ body {
     padding: 20px;
     margin: 0;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  }
-  
-  h1 {
+}
+
+h1 {
     color: #2c3e50;
     font-size: 2.5em;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilo do menu */
-  .menu {
+}
+
+/* Estilo do menu */
+.menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
     width: 100%;
-    background-color: #f8f8f8;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  }
-  
-  .menu:hover {
-    background-color: #ecf0f1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu-list {
+    background: none; /* Remove o fundo específico */
+    box-shadow: none; /* Remove o box-shadow */
+}
+
+.menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -39,9 +33,9 @@ body {
     gap: 14px;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .menu-item {
+}
+
+.menu-item {
     background-color: #ecf0f1;
     border-radius: 8px;
     height: 40px;
@@ -61,16 +55,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: relative;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-  }
-  
-  .menu-item:hover {
+}
+
+.menu-item:hover {
     background-color: #97a6b6;
     color: #f8f8f8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
-  }
-  
-  .menu-item::after {
+}
+
+.menu-item::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -79,44 +73,45 @@ body {
     height: 3px;
     background-color: #d4b192;
     transition: width 0.3s ease, left 0.3s ease;
-  }
-  
-  .menu-item:hover::after {
+}
+
+.menu-item:hover::after {
     width: 100%;
     left: 0;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
     .menu-item {
-      height: 35px;
-      font-size: 0.9em;
-      padding: 0 12px;
+        height: 35px; /* Reduz altura */
+        font-size: 0.9em; /* Fonte menor */
+        padding: 0 12px; /* Padding reduzido */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .menu-list {
-      flex-direction: column;
-      gap: 12px;
+        flex-direction: column; /* Empilha os itens */
+        gap: 8px; /* Espaçamento menor */
     }
-  
+
     .menu-item {
-      height: 30px;
-      font-size: 0.85em;
-      padding: 0 10px;
+        height: 30px; /* Altura mais compacta */
+        font-size: 0.85em; /* Fonte menor */
+        padding: 0 10px; /* Padding ainda menor */
     }
-  }
-  
-  /* Estilo das cartas */
-  .tarot-container {
+}
+
+/* Estilo das cartas */
+.tarot-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-  }
-  
-  .card {
+}
+
+.card {
     background-color: #ecf0f1;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -130,14 +125,14 @@ body {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card-title {
+}
+
+.card-title {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -147,9 +142,9 @@ body {
     font-size: 1.2em;
     padding: 5px;
     text-align: center;
-  }
-  
-  .card-meaning {
+}
+
+.card-meaning {
     background-color: #ecf0f1;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -157,9 +152,9 @@ body {
     margin-top: 20px;
     width: 50%;
     margin-left: 25%;
-  }
-  
-  button {
+}
+
+button {
     background-color: #2c3e50;
     color: #ecf0f1;
     border: none;
@@ -168,8 +163,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #34495e;
-  }  
+}
