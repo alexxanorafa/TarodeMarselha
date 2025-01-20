@@ -91,14 +91,14 @@ h1 {
 
 @media (max-width: 480px) {
     .menu-list {
-        flex-direction: column; /* Empilha os itens */
-        gap: 4px; /* Espaçamento menor */
+        flex-direction: row; /* Empilha os itens */
+        gap: 2px; /* Espaçamento menor */
     }
 
     .menu-item {
-        height: 30px; /* Altura mais compacta */
-        font-size: 0.65em; /* Fonte menor */
-        padding: 0 5px; /* Padding ainda menor */
+        height: 20px; /* Altura mais compacta */
+        font-size: 0.55em; /* Fonte menor */
+        padding: 0 3px; /* Padding ainda menor */
     }
 }
 
