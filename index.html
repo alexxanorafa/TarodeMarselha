@@ -5,225 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarô de Marselha</title>
   <meta name="description" content="Tarô de Marselha">
-  <style>
-    body {
-      font-family: 'Times New Roman', serif;
-      text-align: center;
-      padding: 20px;
-      margin: 0;
-      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    }
-
-    h1 {
-      color: #2c3e50;
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-/* Contêiner do menu */
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  width: 100%;
-  background-color: #f8f8f8; /* Fundo neutro */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); /* Sombra leve */
-}
-
-.menu:hover {
-  background-color: #ecf0f1; /* Fundo mais escuro no hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Realce na sombra */
-}
-
-/* Lista do menu */
-.menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 14px; /* Espaço entre os itens */
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Estilo para os itens do menu */
-.menu-item {
-  background-color: #ecf0f1; /* Fundo padrão do botão */
-  border-radius: 8px; /* Bordas arredondadas mais elegantes */
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #2c3e50; /* Cor do texto */
-  font-size: 0.95em;
-  font-weight: 500;
-  padding: 0 16px;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra leve */
-  position: relative;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-/* Efeito hover no item do menu */
-.menu-item:hover {
-  background-color: #97a6b6; /* Fundo mais escuro */
-  color: #f8f8f8; /* Texto claro no hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
-  transform: translateY(-2px); /* Elevação sutil */
-}
-
-/* Efeito de foco */
-.menu-item:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(52, 73, 94, 0.3); /* Destaque sutil */
-  background-color: #97a6b6; /* Fundo escuro */
-  color: #ecf0f1; /* Texto claro */
-}
-
-/* Linha inferior dinâmica */
-.menu-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  background-color: #d4b192; /* Cor dourada */
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-.menu-item:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-/* Ajustes para tornar o menu responsivo */
-@media (max-width: 768px) {
-  .menu-item {
-    height: 35px;
-    font-size: 0.9em;
-    padding: 0 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu-list {
-    flex-direction: column; /* Empilha os itens no mobile */
-    gap: 12px;
-  }
-
-  .menu-item {
-    height: 30px;
-    font-size: 0.85em;
-    padding: 0 10px;
-  }
-}
-    
-    .tarot-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .card {
-      background-color: #ecf0f1;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      width: 150px;
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .card-title {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
-      background-color: rgba(44, 62, 80, 0.8);
-      color: #ecf0f1;
-      font-size: 1.2em;
-      padding: 5px;
-      text-align: center;
-    }
-
-    .card-meaning {
-      background-color: #ecf0f1;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      margin-top: 20px;
-      width: 50%;
-      margin-left: 25%;
-    }
-
-    footer {
-      margin-top: 20px;
-      color: #2c3e50;
-      font-size: 0.9em;
-    }
-
-    .button-container {
-      margin-top: 20px;
-    }
-
-    button {
-      background-color: #2c3e50;
-      color: #ecf0f1;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1.2em;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #34495e;
-    }
-
-    @keyframes flip {
-      0% { transform: rotateY(0); }
-      100% { transform: rotateY(180deg); }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <nav class="menu" aria-label="Menu de navegação">
-        <ul class="menu-list">
-          <li><a href="https://alexxanorafa.github.io/Tempo_e_Sonhos/" class="menu-item" aria-label="Tempo e Sonhos">Tempo e Sonhos</a></li>
-          <li><a href="https://alexxanorafa.github.io/posicionamentodosastros/" class="menu-item" aria-label="Mapa Astral">Mapa Astral</a></li>
-          <li><a href="https://alexxanorafa.github.io/TarodeMarselha/" class="menu-item" aria-label="Tarô de Marselha">Tarô de Marselha</a></li>
-          <li><a href="https://alexxanorafa.github.io/Runas-do-Destino/" class="menu-item" aria-label="Runas do Destino">Runas do Destino</a></li>
-          <li><a href="https://alexxanorafa.github.io/O-Construtor-do-Destino/" class="menu-item" aria-label="O Construtor do Destino">O Construtor do Destino</a></li>
-        </ul>
-      </nav>
+  <nav class="menu" aria-label="Menu de navegação">
+    <ul class="menu-list">
+      <li><a href="https://alexxanorafa.github.io/Tempo_e_Sonhos/" class="menu-item" aria-label="Tempo e Sonhos">Tempo e Sonhos</a></li>
+      <li><a href="https://alexxanorafa.github.io/posicionamentodosastros/" class="menu-item" aria-label="Mapa Astral">Mapa Astral</a></li>
+      <li><a href="https://alexxanorafa.github.io/TarodeMarselha/" class="menu-item" aria-label="Tarô de Marselha">Tarô de Marselha</a></li>
+      <li><a href="https://alexxanorafa.github.io/Runas-do-Destino/" class="menu-item" aria-label="Runas do Destino">Runas do Destino</a></li>
+      <li><a href="https://alexxanorafa.github.io/O-Construtor-do-Destino/" class="menu-item" aria-label="O Construtor do Destino">O Construtor do Destino</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Tarô de Marselha</h1>
   </header>
+
   <main>
     <div class="controls">
       <label for="draw-type">Escolha o tipo de tiragem:</label>
@@ -238,12 +37,15 @@
       </select>
       <button id="draw-button">Tirar Cartas</button>
     </div>
+
     <div id="tarot-container" class="tarot-container"></div>
     <div id="cards-meanings" class="meanings-container"></div>
   </main>
+
   <footer>
     <p>© 2025 Tarô de Marselha.</p>
   </footer>
+
   <script src="cards.js"></script>
   <script src="script.js"></script>
 </body>
