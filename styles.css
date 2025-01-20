@@ -112,11 +112,11 @@ h1 {
 }
 
 .card {
-    background-color: #ecf0f1;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 150px;
-    height: 250px;
+    background-color: inherit;
+    border-radius: 15px;
+    box-shadow: 0 0 5px linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    width: 80px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,12 +134,12 @@ h1 {
 
 .card-title {
     position: absolute;
-    bottom: 10px;
+    bottom: auto;
     left: 0;
     right: 0;
-    background-color: rgba(44, 62, 80, 0.8);
-    color: #ecf0f1;
-    font-size: 1.2em;
+    background-color: inherit;
+    color: inherit;
+    font-size: 1 em;
     padding: 5px;
     text-align: center;
 }
