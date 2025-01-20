@@ -83,22 +83,22 @@ h1 {
 /* Ajustes responsivos */
 @media (max-width: 768px) {
     .menu-item {
-        height: 35px; /* Reduz altura */
-        font-size: 0.9em; /* Fonte menor */
-        padding: 0 12px; /* Padding reduzido */
+        height: 25px; /* Reduz altura */
+        font-size: 0.7em; /* Fonte menor */
+        padding: 0 6px; /* Padding reduzido */
     }
 }
 
 @media (max-width: 480px) {
     .menu-list {
         flex-direction: column; /* Empilha os itens */
-        gap: 8px; /* Espaçamento menor */
+        gap: 4px; /* Espaçamento menor */
     }
 
     .menu-item {
         height: 30px; /* Altura mais compacta */
-        font-size: 0.85em; /* Fonte menor */
-        padding: 0 10px; /* Padding ainda menor */
+        font-size: 0.65em; /* Fonte menor */
+        padding: 0 5px; /* Padding ainda menor */
     }
 }
 
