@@ -19,10 +19,10 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 0;
     width: 100%;
-    background: none; /* Remove o fundo específico */
-    box-shadow: none; /* Remove o box-shadow */
+    background: transparent; /* Remove o fundo específico */
+    box-shadow: transparent; /* Remove o box-shadow */
 }
 
 .menu-list {
@@ -36,23 +36,23 @@ h1 {
 }
 
 .menu-item {
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    height: 40px;
+    background-color: transparent;
+    border-radius: 4px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: #2c3e50;
-    font-size: 0.95em;
-    font-weight: 500;
-    padding: 0 16px;
+    font-size: 0.75em;
+    font-weight: 250;
+    padding: 0 8px;
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px transparent;
     position: relative;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
