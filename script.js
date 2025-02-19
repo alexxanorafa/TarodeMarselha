@@ -74,4 +74,4 @@ document.getElementById("draw-button").addEventListener("click", () => {
     `;
     meaningsContainer.appendChild(meaningElement);
   });
-});  
+});
